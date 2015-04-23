@@ -183,7 +183,7 @@ class Controller:
         js = json.dumps(
             {'attrs': ["bytes", "num_sta", "time"], 'start': int(endtime - 86400) * 1000, 'end': int(endtime - 3600) * 1000})
         params = urllib.urlencode({'json': js})
-        return self._read(self.api_url + 'stat/report/hourly.system', params)
+        return self._read(self.api_url + 'stat/hourly.ap', params)
 
     def get_events(self):
         """Return a list of all Events."""
